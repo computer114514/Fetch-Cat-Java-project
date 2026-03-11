@@ -12,4 +12,8 @@ public interface CatService {
     public List<Cat> getCat();
 
     void delCat(String catId);
+
+    void updateCat(Cat cat);
+
+    Cat getCatById(String catId);
 }

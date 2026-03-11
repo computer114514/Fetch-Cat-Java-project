@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92fd6f6b-9346-421c-ad12-1d65d1c2a879" name="更改" comment="" />
+    <list default="true" id="92fd6f6b-9346-421c-ad12-1d65d1c2a879" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/dto/loginFromDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/pojo/MyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/JWTUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/UserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/20b77871-5386-4bf7-9f01-374f3472fea7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/20b77871-5386-4bf7-9f01-374f3472fea7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/CatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/CatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/CatMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/CatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/CatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/CatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/CatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/CatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/CatMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/CatMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/CatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/CatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/CatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/CatServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,6 +64,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="39TensKnRUsieHcT66OglDgpwuJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,11 +82,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.OnlineCatCatchingApplication (1).executor": "Run",
+    "Spring Boot.OnlineCatCatchingApplication (1).executor": "Debug",
     "Spring Boot.OnlineCatCatchingApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/30580/Desktop/电子猫猫项目/Online-Cat-Catching",
+    "last_opened_file_path": "C:/Users/30580/Desktop/项目/电子猫猫项目/Online-Cat-Catching",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,22 +137,23 @@
       <updated>1770724658616</updated>
       <workItem from="1770724659808" duration="138000" />
       <workItem from="1770724921776" duration="5493000" />
-      <workItem from="1770791568515" duration="18662000" />
+      <workItem from="1770791568515" duration="25388000" />
+      <workItem from="1771055469646" duration="3740000" />
+      <workItem from="1771116930794" duration="100000" />
+      <workItem from="1771143651643" duration="54000" />
+      <workItem from="1771844808135" duration="5561000" />
+      <workItem from="1772435585521" duration="6000" />
+      <workItem from="1772435991796" duration="6000" />
+      <workItem from="1773032228444" duration="7412000" />
+      <workItem from="1773056591450" duration="631000" />
+      <workItem from="1773101450322" duration="1099000" />
+      <workItem from="1773106801500" duration="10961000" />
+      <workItem from="1773187885785" duration="174000" />
+      <workItem from="1773193472490" duration="6877000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/CatServiceImpl.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

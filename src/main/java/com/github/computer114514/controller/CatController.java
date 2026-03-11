@@ -32,4 +32,14 @@ public class CatController {
         catService.delCat(catId);
         return Result.success();
     }
+    @PutMapping("/update")
+    public Result updateCat(@RequestBody Cat cat){
+        catService.updateCat(cat);
+        return Result.success();
+    }
+    @GetMapping("/get/{catId}")
+    public Result getCatById(@PathVariable String catId){
+        Cat cat=catService.getCatById(catId);
+        return Result.success(cat);
+    }
     }

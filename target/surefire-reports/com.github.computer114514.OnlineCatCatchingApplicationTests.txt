@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.github.computer114514.OnlineCatCatchingApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.422 s -- in com.github.computer114514.OnlineCatCatchingApplicationTests
