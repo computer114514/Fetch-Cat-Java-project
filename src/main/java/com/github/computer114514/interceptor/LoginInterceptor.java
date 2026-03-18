@@ -1,5 +1,7 @@
 package com.github.computer114514.interceptor;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.github.computer114514.domain.dto.UserDTO;
 import com.github.computer114514.utils.JWTUtil;
 import com.github.computer114514.utils.UserContext;
 import io.jsonwebtoken.Claims;
@@ -7,40 +9,34 @@ import io.jsonwebtoken.Jwt;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import static com.github.computer114514.constant.UserConstant.REDIS_USER_LOGIN_TOKEN_DDL;
+import static com.github.computer114514.constant.UserConstant.REDIS_USER_LOGIN_TOKEN_KEY;
+
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
 
-    //拦截器:
+
+    /**
+      拦截器:1,前端传进来request
+     * 2,获取token，不存在死。
+     * 3，redis查询token,看有没有登录凭证，没有，死！
+     * 4，存储到threadLocal
+     */
 
     @Override
-
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String token = request.getHeader("Authorization");
-        //1,获得前端传过来的token
-        if(token==null||!token.startsWith("Bearer ")){
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-//            response.getWriter().write("未授权,token无效");
-            return false;
+        UserDTO user = UserContext.getUser();
+        if(user==null){
+            response.setStatus(401);
         }
-        token = token.substring(7);//去掉bearer
-//2,检查token有效性。
-        if(!JWTUtil.validateToken(token)){
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-//            response.getWriter().write("未授权,token不合法");
-            return false;
-        }
-        //3,解析token
-        Claims claims = JWTUtil.parseToken(token);
-        Long userId = claims.get("userId", Long.class);
-        if(userId==null){
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-//            response.getWriter().write("token对应的userId为无效！");
-        }
-        UserContext.setId(userId);
-
-        return true;
-        //4，放行
+        return user != null;
     }
 }

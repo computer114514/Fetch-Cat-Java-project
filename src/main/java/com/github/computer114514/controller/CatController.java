@@ -1,7 +1,7 @@
 package com.github.computer114514.controller;
 
-import com.github.computer114514.pojo.Cat;
-import com.github.computer114514.pojo.Result;
+import com.github.computer114514.domain.enity.Cat;
+import com.github.computer114514.domain.enity.Result;
 import com.github.computer114514.service.Impl.CatServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

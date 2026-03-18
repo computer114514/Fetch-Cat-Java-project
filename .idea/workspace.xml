@@ -5,28 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fd6f6b-9346-421c-ad12-1d65d1c2a879" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/dto/loginFromDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/pojo/MyResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/JWTUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/constant/RedisConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/constant/UserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/enity/RedisData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/enity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/vo/LoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/enums/UserEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/interceptor/RefreshTokenInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/CacheClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/PhoneUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/20b77871-5386-4bf7-9f01-374f3472fea7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/20b77871-5386-4bf7-9f01-374f3472fea7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/OnlineCatCatchingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/OnlineCatCatchingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/configuration/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/CatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/CatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/dto/loginFromDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/dto/loginFromDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/pojo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/CatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/CatMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/pojo/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/enity/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/pojo/MyResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/domain/enity/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/CatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/CatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/CatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/CatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/computer114514/utils/UserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Online-Cat-Catching-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Online-Cat-Catching-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/OnlineCatCatchingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/OnlineCatCatchingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/configuration/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/configuration/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/CatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/CatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/domain/dto/loginFromDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/domain/dto/loginFromDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/domain/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/interceptor/LoginInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/CatMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/CatMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/pojo/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/pojo/MyResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/pojo/Result.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/CatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/CatService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/CatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/CatServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/computer114514/utils/UserContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/computer114514/utils/UserContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2026-02-27T10-37-37_094.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.computer114514.OnlineCatCatchingApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.github.computer114514.OnlineCatCatchingApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/github/computer114514/OnlineCatCatchingApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +78,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -71,39 +113,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.OnlineCatCatchingApplication (1).executor": "Debug",
-    "Spring Boot.OnlineCatCatchingApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/30580/Desktop/项目/电子猫猫项目/Online-Cat-Catching",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.Online-Cat-Catching [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Online-Cat-Catching [compile].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OnlineCatCatchingApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OnlineCatCatchingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/30580/Desktop/项目/电子猫猫项目/Online-Cat-Catching&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunManager" selected="Spring Boot.OnlineCatCatchingApplication (1)">
     <configuration name="OnlineCatCatchingApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Online-Cat-Catching" />
@@ -149,11 +196,81 @@
       <workItem from="1773101450322" duration="1099000" />
       <workItem from="1773106801500" duration="10961000" />
       <workItem from="1773187885785" duration="174000" />
-      <workItem from="1773193472490" duration="6877000" />
+      <workItem from="1773193472490" duration="7475000" />
+      <workItem from="1773554399829" duration="3102000" />
+      <workItem from="1773557851495" duration="3270000" />
+      <workItem from="1773574443064" duration="2843000" />
+      <workItem from="1773577512498" duration="1914000" />
+      <workItem from="1773623128042" duration="742000" />
+      <workItem from="1773623888276" duration="640000" />
+      <workItem from="1773624594849" duration="5425000" />
+      <workItem from="1773630805433" duration="318000" />
+      <workItem from="1773631805887" duration="1971000" />
+      <workItem from="1773633812828" duration="11684000" />
+      <workItem from="1773661704270" duration="1356000" />
+      <workItem from="1773663129756" duration="1699000" />
+      <workItem from="1773720893076" duration="476000" />
+      <workItem from="1773721573813" duration="332000" />
+      <workItem from="1773721939641" duration="998000" />
+      <workItem from="1773727496993" duration="2163000" />
+      <workItem from="1773815838787" duration="625000" />
+      <workItem from="1773816485474" duration="202000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/interceptor/LoginInterceptor.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://E:/maven/repository/com/baomidou/mybatis-plus-extension/3.5.3.1/mybatis-plus-extension-3.5.3.1.jar!/com/baomidou/mybatisplus/extension/service/IService.class</url>
+          <line>149</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://E:/maven/repository/com/baomidou/mybatis-plus-extension/3.5.3.1/mybatis-plus-extension-3.5.3.1.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class</url>
+          <line>140</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://E:/maven/repository/com/baomidou/mybatis-plus-core/3.5.3.1/mybatis-plus-core-3.5.3.1.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/service/Impl/UserServiceImpl.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/computer114514/interceptor/RefreshTokenInterceptor.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="phone.matches(CHINA_PHONE_REGEX)" language="JAVA" />
+        <watch expression="phoneRight" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

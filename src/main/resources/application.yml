@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 #  指定端口号
 
 spring:
@@ -8,13 +8,23 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 192.168.100.128
+      port: 6379
+      password: 123321
+      database: 3
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
 
-# MyBatis 原生配置（关键！）
-mybatis:
-  # 指定 Mapper XML 文件位置（可选，如果你用注解可省略）
-  mapper-locations: classpath:mapper/*.xml
-  # 指定实体类别名包（避免写全限定名）
-  type-aliases-package: com.github.computer114514.pojo
-  # 开启驼峰映射（数据库 user_id → Java userId）
+mybatis-plus:
+  type-aliases-package: com.github.computer114514.domain.enity
   configuration:
-    map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: true #开始驼峰
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印日记
+  global-config:
+    db-config:
+      id-type: auto #全局--数据库配置--主键自增

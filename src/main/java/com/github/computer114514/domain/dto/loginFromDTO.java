@@ -14,4 +14,12 @@ public class loginFromDTO {
      * 密码
      */
     private String password;
+    /**
+     * 手机号
+     */
+    private String phone;
+    /**
+     * 验证码
+     */
+    private String code;
 }

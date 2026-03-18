@@ -1071,7 +1071,7 @@
       <UnderlyingIndexName>cat_id</UnderlyingIndexName>
     </key>
     <column id="323" parent="307" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
@@ -1086,17 +1086,23 @@
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="326" parent="307" name="lastLoginIn">
+    <column id="326" parent="307" name="last_login_in">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="327" parent="307" name="PRIMARY">
+    <column id="327" parent="307" name="phone">
+      <Comment>手机号</Comment>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="328" parent="307" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="328" parent="307" name="PRIMARY">
+    <key id="329" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
