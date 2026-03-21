@@ -1,5 +1,6 @@
 package com.github.computer114514.service.Impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -7,16 +8,22 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.computer114514.mapper.CatMapper;
 import com.github.computer114514.domain.enity.Cat;
 import com.github.computer114514.service.CatService;
+import com.github.computer114514.utils.CacheClient;
 import com.github.computer114514.utils.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static com.github.computer114514.constant.CatConstant.CACHE_CAT_KEY;
 
 @Service
 public class CatServiceImpl extends ServiceImpl<CatMapper,Cat> implements CatService {
     @Autowired
-    CatMapper catMapper;
+    private CatMapper catMapper;
+     @Autowired
+    private CacheClient cacheClient;
     @Override
     public void saveCat(String url, String id, String name) {
         //url是什么？是图片链接，需要处理封装
@@ -45,7 +52,19 @@ public class CatServiceImpl extends ServiceImpl<CatMapper,Cat> implements CatSer
 
     @Override
     public Cat getCatById(String catId) {
-        return getCatById(catId,getUserIdInThreadLocal());
+/**
+ * 穿透
+ */
+//        return cacheClient.queryWithPassThrough(CACHE_CAT_KEY,catId,Cat.class,this::getCatByIdWrapper,30L,
+//                TimeUnit.MINUTES);
+
+      return cacheClient.queryWithLogicalExpire(CACHE_CAT_KEY,catId,
+              Cat.class,this::getCatByIdWrapper,30L,
+              TimeUnit.MINUTES);
+
+
+//        return getCatById(catId,getUserIdInThreadLocal());
+
     }
 @Override
     public List<Cat> searchCatsList(Long userId) {
@@ -93,17 +112,20 @@ public class CatServiceImpl extends ServiceImpl<CatMapper,Cat> implements CatSer
         this.baseMapper.update(null, wrapper);
     }
     @Override
-    public Cat getCatById(String  catId,Long userId) {
+    public Cat getCatByIdWrapper(String  catId) {
+
+        int userId = UserContext.getUser().getId();
         // 1. 创建 Wrapper (Lambda 写法最安全，不会写错字段名)
         LambdaQueryWrapper<Cat> wrapper = new LambdaQueryWrapper<>();
         // 2. 构造条件: cat 表中的 userId 字段 等于 传入的 userId
         // Cat::getUserId 会自动识别为数据库的 user_id 列
-        wrapper.eq(Cat::getUserId, userId).eq(Cat::getCatId, catId);
-
+        wrapper.eq(Cat::getUserId, userId).eq(Cat::getCatId,catId);
         // 3. 执行查询 (BaseMapper 自带的方法)
         return this.baseMapper.selectOne(wrapper);
     }
     public Long getUserIdInThreadLocal(){
         return (long) UserContext.getUser().getId();
     }
+
+
 }

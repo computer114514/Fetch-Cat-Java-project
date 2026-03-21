@@ -6,6 +6,7 @@ import cn.hutool.core.util.BooleanUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.github.computer114514.domain.dto.UserDTO;
 import com.github.computer114514.domain.enity.RedisData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import java.util.function.Function;
 
 import static cn.hutool.json.JSONUtil.toJsonStr;
 import static com.github.computer114514.constant.RedisConstant.CACHE_NULL_TTL;
+import static com.github.computer114514.constant.RedisConstant.REDIS_LOCK;
 
 /**
  * 直译:缓存服务。
@@ -33,7 +35,7 @@ public class CacheClient {
     private StringRedisTemplate stringRedisTemplate;
 
     public static final ExecutorService CACHE_REBUILD_EXECUTOR =
-            Executors.newFixedThreadPool(2);
+            Executors.newFixedThreadPool(10);
 
 
     /**
@@ -82,6 +84,7 @@ public class CacheClient {
      */
     public <R,ID> R  queryWithPassThrough(String keyPrefix, ID id, Class<R> type, Function<ID,R> dbFallback, Long time, TimeUnit unit){
         String key= keyPrefix + id;
+        int userId = UserContext.getUser().getId();
         //1,redis存储缓存。
         String Json = stringRedisTemplate.opsForValue().get(key);
         //2,判断存在//3,直接返回
@@ -124,7 +127,7 @@ public class CacheClient {
             return r;
         }
         //4.1,过期,缓存重建。
-        String lockKey=keyPrefix+id;
+        String lockKey=REDIS_LOCK+id;
         //5.1获取锁--->失败,返回旧数据
         boolean isLock = tryLock(lockKey);
         if(isLock){

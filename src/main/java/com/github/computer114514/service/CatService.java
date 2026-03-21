@@ -24,5 +24,5 @@ public interface CatService extends IService<Cat> {
 
     public void updateCat(Cat cat, Long userId);
 
-    public Cat getCatById(String  catId,Long userId);
+    public Cat getCatByIdWrapper(String  catId);
 }
