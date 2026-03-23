@@ -11,4 +11,7 @@ public interface RareCatService extends IService<RareCat> {
     RareCatVO getRareCat();
 
     Result<SecKillVO> getSecKillTime();
+
+    Result<Void> buyRareCat(String rareCatId) throws InterruptedException;
+
 }

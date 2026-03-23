@@ -97,6 +97,11 @@
             <version>3.5.16</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.13.6</version>
+        </dependency>
 
 
 

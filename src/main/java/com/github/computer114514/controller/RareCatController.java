@@ -6,6 +6,7 @@ import com.github.computer114514.domain.vo.SecKillVO;
 import com.github.computer114514.service.RareCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,9 @@ public class RareCatController {
     @GetMapping("/getRemainTime")
     public Result<SecKillVO> getRemainTime(){
        return rareCatService.getSecKillTime();
+    }
+    @PostMapping("/buyRareCat")
+    public Result<Void> buyRareCat(String rareCatId) throws InterruptedException {
+        return rareCatService.buyRareCat(rareCatId);
     }
 }
